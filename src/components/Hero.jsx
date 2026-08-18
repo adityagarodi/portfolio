@@ -6,7 +6,7 @@ const ParticleBackground = () => {
   const [particles, setParticles] = useState([]);
 
   useEffect(() => {
-    const newParticles = Array.from({ length: 50 }, () => ({
+    const newParticles = Array.from({ length: 25 }, () => ({
       x: Math.random() * 100,
       y: Math.random() * 100,
       size: Math.random() * 2 + 1,

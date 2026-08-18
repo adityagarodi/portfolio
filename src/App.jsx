@@ -1,16 +1,17 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Education from './components/Education';
-import Certifications from './components/Certifications';
-import LanguagesSoftSkills from './components/LanguagesSoftSkills';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Loading from './components/Loading';
+
+const About = lazy(() => import('./components/About'));
+const Skills = lazy(() => import('./components/Skills'));
+const Experience = lazy(() => import('./components/Experience'));
+const Projects = lazy(() => import('./components/Projects'));
+const Education = lazy(() => import('./components/Education'));
+const Certifications = lazy(() => import('./components/Certifications'));
+const LanguagesSoftSkills = lazy(() => import('./components/LanguagesSoftSkills'));
+const Contact = lazy(() => import('./components/Contact'));
 
 function App() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -40,14 +41,30 @@ function App() {
     <div className="min-h-screen bg-background">
       <Navbar activeSection={activeSection} />
       <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Education />
-      <Certifications />
-      <LanguagesSoftSkills />
-      <Contact />
+      <Suspense fallback={<Loading />}>
+        <About />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <Skills />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <Experience />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <Projects />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <Education />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <Certifications />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <LanguagesSoftSkills />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <Contact />
+      </Suspense>
       <Footer />
     </div>
   );
