@@ -9,113 +9,226 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Reusable SVG sprite — referenced via <use href="#icon-id"> -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="icon-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22h6"/>
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+      <rect x="2" y="9" width="4" height="12"/>
+      <circle cx="4" cy="4" r="2"/>
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect width="20" height="16" x="2" y="4" rx="2"/>
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" x2="21" y1="6" y2="6"/>
+      <line x1="3" x2="21" y1="12" y2="12"/>
+      <line x1="3" x2="21" y1="18" y2="18"/>
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18"/>
+      <line x1="6" y1="6" x2="18" y2="18"/>
+    </symbol>
+    <symbol id="icon-arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" x2="12" y1="15" y2="3"/>
+    </symbol>
+    <symbol id="icon-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 2L11 13"/>
+      <path d="M22 2l-7 20-4-9-9-4 20-7z"/>
+    </symbol>
+    <symbol id="icon-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="16 18 22 12 16 6"/>
+      <polyline points="8 6 2 12 8 18"/>
+    </symbol>
+    <symbol id="icon-cpu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect width="16" height="16" x="4" y="4" rx="2"/>
+      <rect width="6" height="6" x="9" y="9" rx="1"/>
+      <path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/>
+    </symbol>
+    <symbol id="icon-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+      <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+      <line x1="12" x2="12" y1="19" y2="22"/>
+    </symbol>
+    <symbol id="icon-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <ellipse cx="12" cy="5" rx="9" ry="3"/>
+      <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+      <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+    </symbol>
+    <symbol id="icon-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect width="20" height="14" x="2" y="7" rx="2" ry="2"/>
+      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+    </symbol>
+    <symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+      <circle cx="9" cy="7" r="4"/>
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+    </symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+      <line x1="16" x2="16" y1="2" y2="6"/>
+      <line x1="8" x2="8" y1="2" y2="6"/>
+      <line x1="3" x2="21" y1="10" y2="10"/>
+    </symbol>
+    <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+      <circle cx="12" cy="10" r="3"/>
+    </symbol>
+    <symbol id="icon-graduation" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 10v6M2 10v6"/>
+      <path d="M2 10l10-5 10 5-10 5z"/>
+      <path d="M12 12v9"/>
+    </symbol>
+    <symbol id="icon-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="8" r="6"/>
+      <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </symbol>
+    <symbol id="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+      <polyline points="15 3 21 3 21 9"/>
+      <line x1="10" x2="21" y1="14" y2="3"/>
+    </symbol>
+    <symbol id="icon-languages" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 8l6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/>
+    </symbol>
+    <symbol id="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/>
+      <polyline points="12 6 12 12 16 14"/>
+    </symbol>
+    <symbol id="icon-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+    </symbol>
+    <symbol id="icon-plus-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 12h6M12 9v6"/>
+      <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/>
+    </symbol>
+    <symbol id="icon-heart" viewBox="0 0 24 24" fill="#6366f1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+    </symbol>
+  </svg>
 </head>
 <body>
+
   <!-- Navbar -->
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="navbar-content">
-      <div class="logo gradient-text" onclick="scrollToSection('hero')">APG</div>
-      <ul class="nav-links">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#education" class="nav-link">Education</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+      <div class="logo gradient-text" role="link" tabindex="0" onclick="scrollToSection('hero')" aria-label="Go to top">APG</div>
+      <ul class="nav-links" role="list">
+        <li><a href="#about"        class="nav-link">About</a></li>
+        <li><a href="#skills"       class="nav-link">Skills</a></li>
+        <li><a href="#experience"   class="nav-link">Experience</a></li>
+        <li><a href="#projects"     class="nav-link">Projects</a></li>
+        <li><a href="#education"    class="nav-link">Education</a></li>
+        <li><a href="#contact"      class="nav-link">Contact</a></li>
       </ul>
-      <div class="social-links">
-        <a href="https://github.com/adityagarodi" target="_blank" rel="noopener noreferrer">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      <div class="social-links" aria-label="Social links">
+        <a href="https://github.com/adityagarodi"   target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg width="20" height="20"><use href="#icon-github"/></svg>
         </a>
-        <a href="https://linkedin.com/in/adityagarodi" target="_blank" rel="noopener noreferrer">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        <a href="https://linkedin.com/in/adityagarodi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="20" height="20"><use href="#icon-linkedin"/></svg>
         </a>
-        <a href="mailto:adityagarodi@gmail.com">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+        <a href="mailto:adityagarodi@gmail.com" aria-label="Email">
+          <svg width="20" height="20"><use href="#icon-mail"/></svg>
         </a>
       </div>
-      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+      <a href="#" class="nav-resume-btn" aria-label="Download Resume">
+        <svg width="16" height="16" aria-hidden="true"><use href="#icon-download"/></svg>
+        Resume
+      </a>
+      <button class="mobile-menu-btn" id="menuBtn" onclick="toggleMobileMenu()" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation menu">
+        <svg width="24" height="24" aria-hidden="true"><use href="#icon-menu" id="menuIcon"/></svg>
       </button>
     </div>
   </nav>
 
   <!-- Mobile Menu -->
-  <div id="mobileMenu" class="card" style="display: none; position: fixed; top: 70px; left: 20px; right: 20px; z-index: 999;">
-    <ul style="list-style: none; padding: 16px;">
-      <li style="margin-bottom: 12px;"><a href="#about" style="color: #d1d5db; text-decoration: none; display: block; padding: 8px 0;" onclick="toggleMobileMenu()">About</a></li>
-      <li style="margin-bottom: 12px;"><a href="#skills" style="color: #d1d5db; text-decoration: none; display: block; padding: 8px 0;" onclick="toggleMobileMenu()">Skills</a></li>
-      <li style="margin-bottom: 12px;"><a href="#experience" style="color: #d1d5db; text-decoration: none; display: block; padding: 8px 0;" onclick="toggleMobileMenu()">Experience</a></li>
-      <li style="margin-bottom: 12px;"><a href="#projects" style="color: #d1d5db; text-decoration: none; display: block; padding: 8px 0;" onclick="toggleMobileMenu()">Projects</a></li>
-      <li style="margin-bottom: 12px;"><a href="#education" style="color: #d1d5db; text-decoration: none; display: block; padding: 8px 0;" onclick="toggleMobileMenu()">Education</a></li>
-      <li><a href="#contact" style="color: #d1d5db; text-decoration: none; display: block; padding: 8px 0;" onclick="toggleMobileMenu()">Contact</a></li>
+  <div id="mobileMenu" class="card" hidden style="position:fixed;top:70px;left:20px;right:20px;z-index:999;" role="dialog" aria-label="Mobile navigation">
+    <ul style="list-style:none;padding:16px;">
+      <li style="margin-bottom:12px;"><a href="#about"      class="mobile-nav-link" onclick="toggleMobileMenu()">About</a></li>
+      <li style="margin-bottom:12px;"><a href="#skills"     class="mobile-nav-link" onclick="toggleMobileMenu()">Skills</a></li>
+      <li style="margin-bottom:12px;"><a href="#experience" class="mobile-nav-link" onclick="toggleMobileMenu()">Experience</a></li>
+      <li style="margin-bottom:12px;"><a href="#projects"   class="mobile-nav-link" onclick="toggleMobileMenu()">Projects</a></li>
+      <li style="margin-bottom:12px;"><a href="#education"  class="mobile-nav-link" onclick="toggleMobileMenu()">Education</a></li>
+      <li style="margin-bottom:12px;"><a href="#contact"    class="mobile-nav-link" onclick="toggleMobileMenu()">Contact</a></li>
+      <li style="margin-top:8px;border-top:1px solid rgba(255,255,255,0.1);padding-top:12px;">
+        <a href="#" class="mobile-nav-link mobile-resume-link" onclick="toggleMobileMenu()">
+          <svg width="15" height="15" aria-hidden="true" style="vertical-align:middle;margin-right:6px;"><use href="#icon-download"/></svg>Download Resume
+        </a>
+      </li>
     </ul>
   </div>
 
   <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div id="particles"></div>
+  <section id="hero" class="hero" aria-label="Introduction">
+    <div id="particles" aria-hidden="true"></div>
     <div class="hero-content">
-      <img src="photo.png" alt="Aditya Prakash Garodi" class="profile-image">
+      <img src="photo.png" alt="Portrait of Aditya Prakash Garodi" class="profile-image" width="280" height="280">
       <h1>
         <span>Aditya Prakash</span>
         <span class="gradient-text">Garodi</span>
       </h1>
-      <div class="typing-text">
-        <span id="typingText"></span><span class="cursor">|</span>
+      <div class="typing-text" aria-live="polite" aria-atomic="true">
+        <span id="typingText"></span><span class="cursor" aria-hidden="true">|</span>
       </div>
-      <p>Building efficient, real-world solutions through code, data, and curiosity.</p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn-primary">
-          View Projects
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      <p class="hero-desc">Building efficient, real-world solutions through code, data, and curiosity.</p>
+      <div class="hero-social" aria-label="Social links">
+        <a href="https://github.com/adityagarodi"      target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg width="28" height="28"><use href="#icon-github"/></svg>
         </a>
-        <button class="btn-secondary">
-          Download Resume
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-        </button>
-      </div>
-      <div class="hero-social">
-        <a href="https://github.com/adityagarodi" target="_blank" rel="noopener noreferrer">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22h6"></path></svg>
+        <a href="https://linkedin.com/in/adityagarodi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="28" height="28"><use href="#icon-linkedin"/></svg>
         </a>
-        <a href="https://linkedin.com/in/adityagarodi" target="_blank" rel="noopener noreferrer">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-        </a>
-        <a href="mailto:adityagarodi@gmail.com">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+        <a href="mailto:adityagarodi@gmail.com" aria-label="Email">
+          <svg width="28" height="28"><use href="#icon-mail"/></svg>
         </a>
       </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="section fade-in">
-    <h2 class="section-title gradient-text">About Me</h2>
+  <section id="about" class="section fade-in" aria-labelledby="about-title">
+    <h2 id="about-title" class="section-title gradient-text">About Me</h2>
     <p class="about-text">
-      I am a B.Tech Computer Engineering student at <span style="color: #6366f1; font-weight: 500;">Sanjivani College of Engineering</span> with a CGPA of 8.8.
+      I am a B.Tech Computer Engineering student at <span class="highlight">Sanjivani College of Engineering</span> with a CGPA of 8.8.
       Passionate about AI, data analysis, and software development, I love building efficient solutions
       to real-world problems. I'm constantly learning and exploring new technologies to expand my skill set
       and create impactful projects.
     </p>
     <div class="stats-grid">
       <div class="card stat-card">
-        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10v6"/><path d="M2 10l10-5 10 5-10 5z"/><path d="M12 12v9"/></svg>
+        <svg class="stat-icon" aria-hidden="true"><use href="#icon-graduation"/></svg>
         <div class="stat-number">8.8</div>
         <div class="stat-label">CGPA</div>
       </div>
       <div class="card stat-card">
-        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        <svg class="stat-icon" aria-hidden="true"><use href="#icon-code"/></svg>
         <div class="stat-number">2+</div>
         <div class="stat-label">Projects</div>
       </div>
       <div class="card stat-card">
-        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
-        <div class="stat-number">6</div>
+        <svg class="stat-icon" aria-hidden="true"><use href="#icon-award"/></svg>
+        <div class="stat-number">5</div>
         <div class="stat-label">Certifications</div>
       </div>
       <div class="card stat-card">
-        <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <svg class="stat-icon" aria-hidden="true"><use href="#icon-briefcase"/></svg>
         <div class="stat-number">1</div>
         <div class="stat-label">Internship</div>
       </div>
@@ -123,12 +236,12 @@
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="section fade-in" style="background: rgba(255, 255, 255, 0.02);">
-    <h2 class="section-title gradient-text">Skills</h2>
+  <section id="skills" class="section-alt section fade-in" aria-labelledby="skills-title">
+    <h2 id="skills-title" class="section-title gradient-text">Skills</h2>
     <div class="skills-grid">
       <div class="card skill-category">
         <div class="skill-category-header">
-          <svg class="skill-category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <svg class="skill-category-icon" aria-hidden="true"><use href="#icon-code"/></svg>
           <h3>Languages</h3>
         </div>
         <div class="skill-tags">
@@ -142,7 +255,7 @@
       </div>
       <div class="card skill-category">
         <div class="skill-category-header">
-          <svg class="skill-category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+          <svg class="skill-category-icon" aria-hidden="true"><use href="#icon-cpu"/></svg>
           <h3>Core Concepts</h3>
         </div>
         <div class="skill-tags">
@@ -155,8 +268,8 @@
       </div>
       <div class="card skill-category">
         <div class="skill-category-header">
-          <svg class="skill-category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
-          <h3>Data & AI</h3>
+          <svg class="skill-category-icon" aria-hidden="true"><use href="#icon-mic"/></svg>
+          <h3>Data &amp; AI</h3>
         </div>
         <div class="skill-tags">
           <span class="skill-tag">Machine Learning Basics</span>
@@ -166,207 +279,396 @@
       </div>
       <div class="card skill-category">
         <div class="skill-category-header">
-          <svg class="skill-category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          <svg class="skill-category-icon" aria-hidden="true"><use href="#icon-database"/></svg>
           <h3>Development</h3>
         </div>
         <div class="skill-tags">
           <span class="skill-tag">Web Development</span>
-          <span class="skill-tag">Git & GitHub</span>
-          <span class="skill-tag">IoT & Embedded Systems</span>
+          <span class="skill-tag">Git &amp; GitHub</span>
+          <span class="skill-tag">IoT &amp; Embedded Systems</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Experience Section -->
-  <section id="experience" class="section fade-in">
-    <h2 class="section-title gradient-text">Experience</h2>
+  <section id="experience" class="section fade-in" aria-labelledby="experience-title">
+    <h2 id="experience-title" class="section-title gradient-text">Experience</h2>
     <div class="timeline">
       <div class="timeline-item">
-        <div class="timeline-dot"></div>
+        <div class="timeline-dot" aria-hidden="true"></div>
         <div class="card timeline-content">
           <div class="timeline-header">
-            <svg class="timeline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <svg class="timeline-icon" aria-hidden="true"><use href="#icon-briefcase"/></svg>
             <div>
               <h3 class="timeline-title">Data Analyst Intern</h3>
               <p class="timeline-company">Bluestock</p>
               <p class="timeline-period">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                <svg width="14" height="14" aria-hidden="true"><use href="#icon-calendar"/></svg>
                 April 2026 – Present
               </p>
             </div>
           </div>
-          <p style="color: #d1d5db; line-height: 1.6;">Worked on data analysis projects using structured datasets; prepared reports and generated insights; applied analytical and problem-solving skills to drive data-informed decisions.</p>
+          <p class="timeline-desc">Worked on data analysis projects using structured datasets; prepared reports and generated insights; applied analytical and problem-solving skills to drive data-informed decisions.</p>
         </div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-dot"></div>
+        <div class="timeline-dot" aria-hidden="true"></div>
         <div class="card timeline-content">
           <div class="timeline-header">
-            <svg class="timeline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <svg class="timeline-icon" aria-hidden="true"><use href="#icon-users"/></svg>
             <div>
               <h3 class="timeline-title">Technical Lead</h3>
               <p class="timeline-company">AI Club – Sanjivani College of Engineering</p>
               <p class="timeline-period">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                <svg width="14" height="14" aria-hidden="true"><use href="#icon-calendar"/></svg>
                 January 2025 – Present
               </p>
             </div>
           </div>
-          <p style="color: #d1d5db; line-height: 1.6;">Organized technical sessions, coding activities, and AI-related events; supported planning and execution of club initiatives; mentored students in AI and programming concepts.</p>
+          <p class="timeline-desc">Organized technical sessions, coding activities, and AI-related events; supported planning and execution of club initiatives; mentored students in AI and programming concepts.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="section fade-in" style="background: rgba(255, 255, 255, 0.02);">
-    <h2 class="section-title gradient-text">Projects</h2>
+  <section id="projects" class="section-alt section fade-in" aria-labelledby="projects-title">
+    <h2 id="projects-title" class="section-title gradient-text">Projects</h2>
     <div class="projects-grid">
-      <div class="card project-card">
-        <div class="project-image">🚀</div>
+      <article class="card project-card">
+        <div class="project-image" aria-hidden="true">🚀</div>
         <div class="project-content">
           <h3 class="project-title">SmartKart — Online Marketplace System</h3>
-          <div class="project-tech">
+          <div class="project-tech" aria-label="Technologies used">
             <span>Python</span>
             <span>OOP</span>
           </div>
           <p class="project-description">A Python-based marketplace system implementing user authentication, product management, and cart functionality using Object-Oriented Programming principles for efficient data handling.</p>
           <div class="project-buttons">
             <a href="https://github.com/adityagarodi" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22h6"></path></svg>
+              <svg width="16" height="16" aria-hidden="true"><use href="#icon-github"/></svg>
               View Code
             </a>
             <a href="#" class="project-btn project-btn-secondary">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+              <svg width="16" height="16" aria-hidden="true"><use href="#icon-external"/></svg>
               Live Demo
             </a>
           </div>
         </div>
-      </div>
-      <div class="card project-card">
-        <div class="project-image">📢</div>
+      </article>
+      <article class="card project-card">
+        <div class="project-image" aria-hidden="true">📢</div>
         <div class="project-content">
           <h3 class="project-title">CampCast — Digital Notice Board System</h3>
-          <div class="project-tech">
+          <div class="project-tech" aria-label="Technologies used">
             <span>Python</span>
             <span>Web Development</span>
           </div>
           <p class="project-description">A digital notice display system built to improve communication and accessibility of campus announcements, developed through structured requirement analysis and collaborative implementation.</p>
           <div class="project-buttons">
             <a href="https://github.com/adityagarodi" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22h6"></path></svg>
+              <svg width="16" height="16" aria-hidden="true"><use href="#icon-github"/></svg>
               View Code
             </a>
             <a href="#" class="project-btn project-btn-secondary">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+              <svg width="16" height="16" aria-hidden="true"><use href="#icon-external"/></svg>
               Live Demo
             </a>
           </div>
         </div>
-      </div>
+      </article>
     </div>
   </section>
 
   <!-- Education Section -->
-  <section id="education" class="section fade-in">
-    <h2 class="section-title gradient-text">Education</h2>
-    <div class="education-list">
-      <div class="card education-item">
-        <svg class="education-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10v6"/><path d="M2 10l10-5 10 5-10 5z"/><path d="M12 12v9"/></svg>
-        <div class="education-content">
-          <h3>Sanjivani College of Engineering</h3>
-          <p class="education-degree">B.Tech Computer Engineering</p>
-          <div class="education-details">
-            <span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+  <section id="education" class="section fade-in" aria-labelledby="education-title">
+    <h2 id="education-title" class="section-title gradient-text">Education</h2>
+
+    <div class="edu-timeline" role="list">
+
+      <!-- Entry 1 — Current -->
+      <div class="edu-entry" role="listitem">
+        <div class="edu-spine">
+          <div class="edu-node edu-node--active" aria-label="Current education">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 10v6M2 10v6"/><path d="M2 10l10-5 10 5-10 5z"/><path d="M12 12v9"/>
+            </svg>
+          </div>
+          <div class="edu-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="edu-card card" tabindex="0">
+          <div class="edu-card-header">
+            <div class="edu-card-left">
+              <div class="edu-active-badge">
+                <span class="edu-pulse" aria-hidden="true"></span>
+                Currently Pursuing
+              </div>
+              <h3 class="edu-institution">Sanjivani College of Engineering</h3>
+              <p class="edu-degree">B.Tech — Computer Engineering</p>
+            </div>
+            <div class="edu-score-wrap">
+              <span class="edu-score">8.8</span>
+              <span class="edu-score-label">CGPA</span>
+            </div>
+          </div>
+          <div class="edu-meta">
+            <span class="edu-meta-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
               Aug 2024 – Present
             </span>
-            <span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="edu-meta-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
               Kopargaon, Maharashtra
             </span>
-            <span class="education-cgpa">8.8 CGPA</span>
           </div>
         </div>
       </div>
-      <div class="card education-item">
-        <svg class="education-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10v6"/><path d="M2 10l10-5 10 5-10 5z"/><path d="M12 12v9"/></svg>
-        <div class="education-content">
-          <h3>Balaji High School</h3>
-          <p class="education-degree">Class XII</p>
-          <div class="education-details">
-            <span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+
+      <!-- Entry 2 -->
+      <div class="edu-entry" role="listitem">
+        <div class="edu-spine">
+          <div class="edu-node" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 10v6M2 10v6"/><path d="M2 10l10-5 10 5-10 5z"/><path d="M12 12v9"/>
+            </svg>
+          </div>
+          <div class="edu-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="edu-card card" tabindex="0">
+          <div class="edu-card-header">
+            <div class="edu-card-left">
+              <h3 class="edu-institution">Balaji High School</h3>
+              <p class="edu-degree">Class XII — Science</p>
+            </div>
+            <div class="edu-score-wrap">
+              <span class="edu-score">81.30<span class="edu-score-unit">%</span></span>
+              <span class="edu-score-label">Score</span>
+            </div>
+          </div>
+          <div class="edu-meta">
+            <span class="edu-meta-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
               2022 – 2023
             </span>
-            <span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="edu-meta-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
               Chhatrapati Sambhajinagar, Maharashtra
             </span>
-            <span class="education-cgpa">81.30%</span>
           </div>
         </div>
       </div>
-      <div class="card education-item">
-        <svg class="education-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10v6"/><path d="M2 10l10-5 10 5-10 5z"/><path d="M12 12v9"/></svg>
-        <div class="education-content">
-          <h3>Rising Star English School</h3>
-          <p class="education-degree">Class X</p>
-          <div class="education-details">
-            <span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+
+      <!-- Entry 3 — last (no bottom line) -->
+      <div class="edu-entry edu-entry--last" role="listitem">
+        <div class="edu-spine">
+          <div class="edu-node" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 10v6M2 10v6"/><path d="M2 10l10-5 10 5-10 5z"/><path d="M12 12v9"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="edu-card card" tabindex="0">
+          <div class="edu-card-header">
+            <div class="edu-card-left">
+              <h3 class="edu-institution">Rising Star English School</h3>
+              <p class="edu-degree">Class X</p>
+            </div>
+            <div class="edu-score-wrap">
+              <span class="edu-score">95.60<span class="edu-score-unit">%</span></span>
+              <span class="edu-score-label">Score</span>
+            </div>
+          </div>
+          <div class="edu-meta">
+            <span class="edu-meta-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
               2020 – 2021
             </span>
-            <span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="edu-meta-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
               Chhatrapati Sambhajinagar, Maharashtra
             </span>
-            <span class="education-cgpa">95.60%</span>
           </div>
         </div>
       </div>
-    </div>
+
+    </div><!-- /edu-timeline -->
   </section>
 
   <!-- Certifications Section -->
-  <section id="certifications" class="section fade-in" style="background: rgba(255, 255, 255, 0.02);">
-    <h2 class="section-title gradient-text">Certifications</h2>
-    <div class="certifications-grid">
-      <div class="card cert-card">
-        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
-        <p class="cert-text">Python Programming Certification</p>
-      </div>
-      <div class="card cert-card">
-        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
-        <p class="cert-text">Data Analytics Fundamentals</p>
-      </div>
-      <div class="card cert-card">
-        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
-        <p class="cert-text">Introduction to Artificial Intelligence</p>
-      </div>
-      <div class="card cert-card">
-        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
-        <p class="cert-text">Web Development Basics (HTML, CSS, JavaScript)</p>
-      </div>
-      <div class="card cert-card">
-        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
-        <p class="cert-text">IoT and Embedded Systems Workshop</p>
-      </div>
-      <div class="card cert-card">
-        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
-        <p class="cert-text">Git & GitHub Fundamentals</p>
-      </div>
+  <section id="certifications" class="section-alt section fade-in" aria-labelledby="cert-title">
+    <h2 id="cert-title" class="section-title gradient-text">Certifications</h2>
+
+    <!-- Carousel wrapper -->
+    <div class="cert-carousel-wrapper">
+      <button class="cert-arrow cert-arrow-left" id="certPrev" aria-label="Previous certificate">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+
+      <div class="cert-carousel" id="certCarousel" role="region" aria-label="Certificates carousel">
+        <!-- Card 1 — newest first -->
+        <article class="cert-slide" data-index="0">
+          <div class="cert-img-wrap">
+            <img src="Certificates/Foundation Course on AI, Machine Learning and Generative AI.jpeg"
+                 alt="Foundation Course on AI, Machine Learning and Generative AI certificate"
+                 class="cert-img" loading="lazy">
+            <button class="cert-view-btn" data-img="Certificates/Foundation Course on AI, Machine Learning and Generative AI.jpeg" data-title="Foundation Course on AI, ML & Generative AI" aria-label="View full certificate">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              View
+            </button>
+          </div>
+          <div class="cert-info">
+            <span class="cert-index-badge">01 / 05</span>
+            <h3 class="cert-title-text">Foundation Course on AI, ML &amp; Generative AI</h3>
+            <p class="cert-org">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10v6"/><path d="M2 10l10-5 10 5-10 5z"/><path d="M12 12v9"/></svg>
+              NPTEL / Swayam
+            </p>
+            <p class="cert-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+              2024
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="cert-slide" data-index="1">
+          <div class="cert-img-wrap">
+            <img src="Certificates/Artifical Intelligence with Machine Learning, Deep Learning.jpg"
+                 alt="Artificial Intelligence with Machine Learning and Deep Learning certificate"
+                 class="cert-img" loading="lazy">
+            <button class="cert-view-btn" data-img="Certificates/Artifical Intelligence with Machine Learning, Deep Learning.jpg" data-title="AI with Machine Learning & Deep Learning" aria-label="View full certificate">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              View
+            </button>
+          </div>
+          <div class="cert-info">
+            <span class="cert-index-badge">02 / 05</span>
+            <h3 class="cert-title-text">AI with Machine Learning &amp; Deep Learning</h3>
+            <p class="cert-org">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10v6"/><path d="M2 10l10-5 10 5-10 5z"/><path d="M12 12v9"/></svg>
+              Internshala Trainings
+            </p>
+            <p class="cert-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+              2024
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="cert-slide" data-index="2">
+          <div class="cert-img-wrap">
+            <img src="Certificates/Statistics & Mathematics for Data Science & Data Analytics.jpeg"
+                 alt="Statistics and Mathematics for Data Science and Data Analytics certificate"
+                 class="cert-img" loading="lazy">
+            <button class="cert-view-btn" data-img="Certificates/Statistics & Mathematics for Data Science & Data Analytics.jpeg" data-title="Statistics & Mathematics for Data Science" aria-label="View full certificate">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              View
+            </button>
+          </div>
+          <div class="cert-info">
+            <span class="cert-index-badge">03 / 05</span>
+            <h3 class="cert-title-text">Statistics &amp; Mathematics for Data Science</h3>
+            <p class="cert-org">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10v6"/><path d="M2 10l10-5 10 5-10 5z"/><path d="M12 12v9"/></svg>
+              Udemy
+            </p>
+            <p class="cert-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+              2024
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="cert-slide" data-index="3">
+          <div class="cert-img-wrap">
+            <img src="Certificates/Internet of Things.jpeg"
+                 alt="Internet of Things certificate"
+                 class="cert-img" loading="lazy">
+            <button class="cert-view-btn" data-img="Certificates/Internet of Things.jpeg" data-title="Internet of Things" aria-label="View full certificate">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              View
+            </button>
+          </div>
+          <div class="cert-info">
+            <span class="cert-index-badge">04 / 05</span>
+            <h3 class="cert-title-text">Internet of Things</h3>
+            <p class="cert-org">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10v6"/><path d="M2 10l10-5 10 5-10 5z"/><path d="M12 12v9"/></svg>
+              NPTEL / Swayam
+            </p>
+            <p class="cert-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+              2024
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="cert-slide" data-index="4">
+          <div class="cert-img-wrap">
+            <img src="Certificates/Career Edge.jpeg"
+                 alt="Career Edge certificate"
+                 class="cert-img" loading="lazy">
+            <button class="cert-view-btn" data-img="Certificates/Career Edge.jpeg" data-title="Career Edge" aria-label="View full certificate">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              View
+            </button>
+          </div>
+          <div class="cert-info">
+            <span class="cert-index-badge">05 / 05</span>
+            <h3 class="cert-title-text">Career Edge — Young Professional</h3>
+            <p class="cert-org">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10v6"/><path d="M2 10l10-5 10 5-10 5z"/><path d="M12 12v9"/></svg>
+              TCS iON
+            </p>
+            <p class="cert-date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+              2024
+            </p>
+          </div>
+        </article>
+      </div><!-- /cert-carousel -->
+
+      <button class="cert-arrow cert-arrow-right" id="certNext" aria-label="Next certificate">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div><!-- /cert-carousel-wrapper -->
+
+    <!-- Dot indicators -->
+    <div class="cert-dots" id="certDots" role="tablist" aria-label="Certificate navigation dots">
+      <button class="cert-dot active" role="tab" aria-selected="true"  aria-label="Certificate 1"></button>
+      <button class="cert-dot"        role="tab" aria-selected="false" aria-label="Certificate 2"></button>
+      <button class="cert-dot"        role="tab" aria-selected="false" aria-label="Certificate 3"></button>
+      <button class="cert-dot"        role="tab" aria-selected="false" aria-label="Certificate 4"></button>
+      <button class="cert-dot"        role="tab" aria-selected="false" aria-label="Certificate 5"></button>
     </div>
   </section>
 
+  <!-- Certificate Lightbox Modal -->
+  <div id="certModal" class="cert-modal" role="dialog" aria-modal="true" aria-label="Certificate viewer" hidden>
+    <div class="cert-modal-backdrop" id="certModalBackdrop"></div>
+    <div class="cert-modal-content">
+      <button class="cert-modal-close" id="certModalClose" aria-label="Close certificate viewer">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <img id="certModalImg" src="" alt="" class="cert-modal-img">
+      <p id="certModalTitle" class="cert-modal-title"></p>
+    </div>
+  </div>
+
   <!-- Languages & Soft Skills Section -->
-  <section id="languages" class="section fade-in">
-    <h2 class="section-title gradient-text">Languages & Soft Skills</h2>
+  <section id="languages" class="section fade-in" aria-labelledby="lang-title">
+    <h2 id="lang-title" class="section-title gradient-text">Languages &amp; Soft Skills</h2>
     <div class="languages-skills-grid">
       <div class="languages-section">
         <h3>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l6 6"/><path d="M4 14l6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="M22 22l-5-10-5 10"/><path d="M14 18h6"/></svg>
+          <svg width="24" height="24" aria-hidden="true"><use href="#icon-languages"/></svg>
           Languages
         </h3>
         <div class="language-tags">
@@ -378,32 +680,32 @@
       </div>
       <div class="soft-skills-section">
         <h3>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <svg width="24" height="24" aria-hidden="true"><use href="#icon-users"/></svg>
           Soft Skills
         </h3>
         <div class="soft-skills-grid">
           <div class="card soft-skill-card">
-            <svg class="soft-skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <svg class="soft-skill-icon" aria-hidden="true"><use href="#icon-chat"/></svg>
             <span class="soft-skill-text">Communication</span>
           </div>
           <div class="card soft-skill-card">
-            <svg class="soft-skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10v6"/><path d="M2 10l10-5 10 5-10 5z"/><path d="M12 12v9"/></svg>
+            <svg class="soft-skill-icon" aria-hidden="true"><use href="#icon-graduation"/></svg>
             <span class="soft-skill-text">Leadership</span>
           </div>
           <div class="card soft-skill-card">
-            <svg class="soft-skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <svg class="soft-skill-icon" aria-hidden="true"><use href="#icon-users"/></svg>
             <span class="soft-skill-text">Teamwork</span>
           </div>
           <div class="card soft-skill-card">
-            <svg class="soft-skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6"/><path d="M12 9v6"/><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+            <svg class="soft-skill-icon" aria-hidden="true"><use href="#icon-plus-circle"/></svg>
             <span class="soft-skill-text">Problem Solving</span>
           </div>
           <div class="card soft-skill-card">
-            <svg class="soft-skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <svg class="soft-skill-icon" aria-hidden="true"><use href="#icon-clock"/></svg>
             <span class="soft-skill-text">Time Management</span>
           </div>
           <div class="card soft-skill-card">
-            <svg class="soft-skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <svg class="soft-skill-icon" aria-hidden="true"><use href="#icon-zap"/></svg>
             <span class="soft-skill-text">Adaptability</span>
           </div>
         </div>
@@ -412,26 +714,26 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section fade-in" style="background: rgba(255, 255, 255, 0.02);">
-    <h2 class="section-title gradient-text">Let's Connect</h2>
+  <section id="contact" class="section-alt section fade-in" aria-labelledby="contact-title">
+    <h2 id="contact-title" class="section-title gradient-text">Let's Connect</h2>
     <div class="contact-grid">
       <div class="contact-info">
         <div class="card contact-item">
-          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <svg class="contact-icon" aria-hidden="true"><use href="#icon-mail"/></svg>
           <div class="contact-details">
             <p>Email</p>
             <a href="mailto:adityagarodi@gmail.com">adityagarodi@gmail.com</a>
           </div>
         </div>
         <div class="card contact-item">
-          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <svg class="contact-icon" aria-hidden="true"><use href="#icon-phone"/></svg>
           <div class="contact-details">
             <p>Phone</p>
             <a href="tel:+918329573845">+91 8329573845</a>
           </div>
         </div>
         <div class="card contact-item">
-          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <svg class="contact-icon" aria-hidden="true"><use href="#icon-map-pin"/></svg>
           <div class="contact-details">
             <p>Location</p>
             <span>Chhatrapati Sambhajinagar, Maharashtra, India</span>
@@ -440,30 +742,30 @@
         <div class="contact-social">
           <p>Connect with me on social media</p>
           <div class="contact-social-links">
-            <a href="https://github.com/adityagarodi" target="_blank" rel="noopener noreferrer">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22h6"></path></svg>
+            <a href="https://github.com/adityagarodi"      target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg width="20" height="20"><use href="#icon-github"/></svg>
             </a>
-            <a href="https://linkedin.com/in/adityagarodi" target="_blank" rel="noopener noreferrer">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            <a href="https://linkedin.com/in/adityagarodi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="20" height="20"><use href="#icon-linkedin"/></svg>
             </a>
           </div>
         </div>
       </div>
-      <form class="contact-form" onsubmit="handleSubmit(event)">
+      <form class="contact-form" onsubmit="handleSubmit(event)" novalidate aria-label="Contact form">
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" required placeholder="Your name">
+          <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name">
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="your@email.com">
+          <input type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="email">
         </div>
         <div class="form-group">
           <label for="message">Message</label>
           <textarea id="message" name="message" required placeholder="Your message..."></textarea>
         </div>
         <button type="submit" class="submit-btn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          <svg width="20" height="20" aria-hidden="true"><use href="#icon-send"/></svg>
           Send Message
         </button>
       </form>
@@ -471,14 +773,14 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="footer-content">
-      <p class="footer-text">© 2024 Aditya Prakash Garodi • All rights reserved</p>
-      <a href="#" class="footer-tagline" onclick="scrollToTop(); return false;">
+      <p class="footer-text">© <span id="footerYear"></span> Aditya Prakash Garodi • All rights reserved</p>
+      <a href="#hero" class="footer-tagline" onclick="scrollToTop(); return false;">
         Built with
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="#6366f1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        <svg width="16" height="16" aria-hidden="true"><use href="#icon-heart"/></svg>
         and
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        <svg width="16" height="16" aria-hidden="true"><use href="#icon-code"/></svg>
       </a>
     </div>
   </footer>
